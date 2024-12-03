@@ -9,10 +9,6 @@ class MaximizeProfitOneSellingOption{
         return 0;
 
         long minPrice = prices[0];
-
-        if (prices.size() == 0)
-        return 0;
-
         long profit = 0;
 
         int i = 1;
