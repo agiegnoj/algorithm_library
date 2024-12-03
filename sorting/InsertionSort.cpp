@@ -7,6 +7,8 @@ class InsertionSort{
 
     vector <T> insertionSortAscending(vector<T>& arr){
 
+        static_assert(std::is_arithmetic<T>::value, "Type T must be arithmetic.");
+
         for (int i = 1; i<arr.size(); i++){
            
             int left = i-1;
