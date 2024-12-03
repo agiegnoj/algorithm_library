@@ -6,6 +6,7 @@ template <typename T>
 class MergeSort{
     public :
     void mergesort(vector<T>& arr, int start, int end){
+        static_assert(std::is_arithmetic<T>::value, "Type T must be arithmetic.");
         sort(arr, start, end);
     }
 
