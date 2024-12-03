@@ -6,6 +6,7 @@ class SelectionSort{
     public:
 
     vector <T> selectionSortAscending(vector<T>& arr){
+        static_assert(std::is_arithmetic<T>::value, "Type T must be arithmetic.");
 
         for (int i = 0; i<arr.size()-1; i++){
             int minIndex = i;
