@@ -90,17 +90,5 @@ class MaximumSquareWithinMatrix{
 
 };
 
-main(){
-    vector <vector<int>> matrix = {
-        {1, 1, 1},
-        {1, 1, 1},
-        {1, 1, 1}
-    };
-
-    MaximumSquareWithinMatrix <int> test;
-
-    cout << test.maxSquare(matrix, 1);
-  
-}
 
 
