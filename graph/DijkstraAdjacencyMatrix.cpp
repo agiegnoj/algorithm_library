@@ -16,10 +16,10 @@ class DijkstraAdjacencyMatrix{
     public:
     
     DijkstraAdjacencyMatrix(vector<vector<int>>& graph, int src){
-        shortestPathsFromSource(graph, src);
+        shortestPathFromSource(graph, src);
     }
 
-   void shortestPathsFromSource(vector<vector<int>>& graph, int src){
+   void shortestPathFromSource(vector<vector<int>>& graph, int src){
         int n = graph.size();
         distances.assign(n, INT_MAX);
         set<int> explored;
@@ -52,7 +52,7 @@ class DijkstraAdjacencyMatrix{
         }
     }
 
-    vector<int> getshortestPathFromSourceToVertex(int src, int end){
+    vector<int> getshortestPathFromSourceToEnd(int src, int end){
 
         int current = end;
         vector<int> path;
