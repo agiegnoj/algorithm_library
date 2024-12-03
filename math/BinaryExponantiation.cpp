@@ -42,8 +42,4 @@ class BinaryExponantiation{
 
 };
 
-main(){
-    BinaryExponantiation be;
-    cout << be.pow(3, 5);
-}
 
