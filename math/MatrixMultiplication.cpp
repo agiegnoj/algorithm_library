@@ -15,11 +15,8 @@ class MatrixMultiplication{
         if (m1[0].size() != m2.size())
         throw invalid_argument("Matrices are not valid.");
         
-           return iterativeMultiplication(m1, m2);
-        
-        
+           return iterativeMultiplication(m1, m2);        
     }
-
 
     vector<vector<T>> iterativeMultiplication(vector<vector<T>> m1, vector<vector<T>> m2){
         int size1 = m1.size();
@@ -38,36 +35,5 @@ class MatrixMultiplication{
         return res;
 
     }
-
     };
 
-    int main (){
-    vector<vector<int>> m1 = {
-        {12, 3},
-        {5, 2},
-      
-
-    };
-
-    vector<vector<int>> m2 = {
-        {3, 7},
-        {5, 12}     
-    };
-
-   MatrixMultiplication <int> mm;
-
-    vector<vector<int>> res2 = mm.multiplyMatrices(m1, m2);
-
-    cout << "\n";
-
-    for (int i = 0; i < res2.size(); i++){
-        if (i != 0) cout << "\n";
-        for (int j = 0; j<  res2.size(); j++){
-            cout << res2[i][j] << " ";
-        }
-        
-    }
-
-
-
-}
