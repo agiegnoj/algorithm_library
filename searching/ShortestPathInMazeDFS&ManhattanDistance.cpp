@@ -43,7 +43,6 @@ private:
         
         memoization[currentX][currentY] = steps;
 
-        // Add current cell to the path
         path.emplace_back(currentX, currentY);
 
         if (currentX == destinationX && currentY == destinationY) {
