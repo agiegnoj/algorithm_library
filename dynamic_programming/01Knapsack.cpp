@@ -46,13 +46,10 @@ class ZeroOneKnapsack{
             for (int j = capacity; j >= weight[i]; j--){
                 tabulation [j] = max (tabulation[j], tabulation[j-weight[i]] + value[i]);
 
-            }
-
-            
+            }         
         }
 
         return tabulation[capacity];
-
         }
 
 };
