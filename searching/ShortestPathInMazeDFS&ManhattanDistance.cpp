@@ -31,37 +31,32 @@ public:
 
 private:
     void dfs(int currentX, int currentY, vector<pair<int, int>>& path, vector<vector<long>>& memoization, long steps) {
-        // Check bounds and blocking object
+        
         if (currentX < 0 || currentX >= maze.size() || currentY < 0 || currentY >= maze[0].size() ||
             maze[currentX][currentY] == blockingObject) {
             return;
         }
 
-        // Avoid revisiting nodes or taking longer paths
         if (memoization[currentX][currentY] <= steps || manhattanDistance(currentX, currentY) + steps >= memoization[destinationX][destinationY]) {
             return;
         }
-
-        // Update memoization
+        
         memoization[currentX][currentY] = steps;
 
         // Add current cell to the path
         path.emplace_back(currentX, currentY);
 
-        // If destination is reached, update the shortest path
         if (currentX == destinationX && currentY == destinationY) {
             if (shortestPath.empty() || path.size() < shortestPath.size()) {
                 shortestPath = path;  // Update shortest path
             }
         } else {
-            // Explore all four directions
             dfs(currentX + 1, currentY, path, memoization, steps + 1);
             dfs(currentX - 1, currentY, path, memoization, steps + 1);
             dfs(currentX, currentY + 1, path, memoization, steps + 1);
             dfs(currentX, currentY - 1, path, memoization, steps + 1);
         }
 
-        // Backtrack (remove the last element to explore other paths)
         path.pop_back();
     }
 
