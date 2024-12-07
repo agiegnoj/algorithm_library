@@ -1,7 +1,6 @@
 #include <vector>
 using namespace std;
 
-
 class CombinationsSum{
     public:
 
