@@ -47,14 +47,16 @@ private:
 
         if (currentX == destinationX && currentY == destinationY) {
             if (shortestPath.empty() || path.size() < shortestPath.size()) {
-                shortestPath = path;  // Update shortest path
+                shortestPath = path;
+                return;
             }
-        } else {
+        } 
+        
             dfs(currentX + 1, currentY, path, memoization, steps + 1);
             dfs(currentX - 1, currentY, path, memoization, steps + 1);
             dfs(currentX, currentY + 1, path, memoization, steps + 1);
             dfs(currentX, currentY - 1, path, memoization, steps + 1);
-        }
+
 
         path.pop_back();
     }
