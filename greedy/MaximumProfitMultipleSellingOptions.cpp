@@ -8,12 +8,11 @@ class MaximizeProfitMultipleSellingOptions{
         return 0;
 
         long profit = 0;
+        int index = 1;
 
-        int i = 1;
-
-        while (i < prices.size()){
-            if (prices[i] > prices[i-1])
-            profit += prices[i]-prices[i-1];
+        while (index < prices.size()){
+            if (prices[index] > prices[index-1])
+            profit += prices[index]-prices[index-1];
         }
 
         return profit;
