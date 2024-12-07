@@ -2,7 +2,7 @@
 using namespace std;
 
 class ZeroOneKnapsack{
-    
+    public: 
     vector<int> ItemValueList(vector <int> value, vector<int> weight, int capacity){
         if (value.size()!= weight.size()) return {};
 
