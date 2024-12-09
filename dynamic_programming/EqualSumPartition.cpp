@@ -45,7 +45,6 @@ vector<vector<int>> getEqualSumPartition(vector<int> nums) {
 
     for (int i = 0; i < nums.size(); i++) {
         set<long> tempSums(dp);
-        tempSums.insert(0); 
         for (long sum : tempSums) {
             long temp = sum + nums[i];
             if (temp == target) {
@@ -58,9 +57,10 @@ vector<vector<int>> getEqualSumPartition(vector<int> nums) {
                 set<int> indices = sumToIndexMap[sum];
                 indices.insert(i);
                 sumToIndexMap[temp] = indices;
+                dp.insert(temp);
+               
             }
         }
-        dp.insert(tempSums.begin(), tempSums.end());
         dp.insert(nums[i]); 
     }
 
