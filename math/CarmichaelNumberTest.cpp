@@ -16,23 +16,25 @@ public:
     }
 
 private:
-    bool littleFermatCheckRandomized(long long num) {
+     bool littleFermatCheckRandomized(long long num) {
         random_device rd;
         mt19937_64 gen(rd());
         uniform_int_distribution<long long> dis(2, num - 2);
 
-        for (int i = 0; i < 35; i++) {
-            long long base = dis(gen);
+        int testCount = 0;
 
+        while (testCount < 30){
+             long long base = dis(gen);
+            
             if (gcd(base, num) != 1) {
                 continue;
-            }
-
-            if (powModM(base, num - 1, num) != 1) {
+            }else{
+                testCount++;
+                if (powModM(base, num - 1, num) != 1) {
                 return false;
             }
+            }
         }
-
         return true;
     }
 
