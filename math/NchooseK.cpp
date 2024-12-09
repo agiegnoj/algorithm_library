@@ -25,8 +25,6 @@ class NchooseK{
             return;
         }
 
-        if (index == arr.size())return;
-
         for (int i = index; i < arr.size(); i++){
             temp.push_back(arr[i]);
             getCombinations(arr, temp, res, i+1, k);
