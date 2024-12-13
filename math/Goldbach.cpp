@@ -43,7 +43,7 @@ class Goldbach{
 
     private :
 
-    bool binarySearch(vector<long> primes, long target){
+    bool binarySearch(const vector<long>& primes, long target){
         int left = 0; 
         int right = primes.size()-1;
 
