@@ -57,7 +57,7 @@ private:
     for (long long factor = 2; factor * factor <= num; factor++) {
         if (num % factor == 0) {
             count++;
-            if (count >= 3)
+            if (count >= 3) return true;
             while (num % factor == 0) {
                 num /= factor;
             }
