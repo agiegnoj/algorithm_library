@@ -8,7 +8,7 @@ class Goldbach{
     public :
 
     vector<pair<long, long>> getGoldbachPairs(long num){
-        if (num %2 ==1 || num < 2)return {};
+        if (num %2 ==1 || num <= 2)return {};
         vector<pair<long, long>> goldbachPairs;
 
         vector<long> primes = primeSieveErathosthenes(num-2);
