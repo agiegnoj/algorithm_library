@@ -8,7 +8,7 @@ class MatrixMultiplication{
     public: 
 
     vector<vector<T>> multiplyMatrices(const vector<vector<T>> m1, vector<vector<T>> m2){
-        static_assert(std::is_arithmetic<T>::value, "Type T must be arithmetic.");
+        static_assert(is_arithmetic<T>::value, "Type T must be arithmetic.");
   
         if (m1[0].size() != m2.size())
         throw invalid_argument("Matrices are not valid.");
