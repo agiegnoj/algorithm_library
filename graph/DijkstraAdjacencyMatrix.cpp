@@ -41,9 +41,10 @@ class DijkstraAdjacencyMatrix{
                 if (graph[vertex][i] != 0 && explored.find(i) == explored.end()) { 
                 int minDistance = distances[vertex] + graph[vertex][i];
                 if (minDistance < distances[i]) {
-                    pq.push(i);
+                    
                     distances[i] = minDistance;
                     predecessors[i] = vertex;
+                    pq.push(i);
                     
                 }
             }
