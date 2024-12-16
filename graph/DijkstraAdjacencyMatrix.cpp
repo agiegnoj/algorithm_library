@@ -68,7 +68,8 @@ class DijkstraAdjacencyMatrix{
             path.push_back(current);
             current = predecessors[current];
         }
-        
+
+        path.push_back(src);
         reverse(path.begin(), path.end());
 
         return path;
