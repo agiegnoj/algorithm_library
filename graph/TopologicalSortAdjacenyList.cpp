@@ -8,6 +8,9 @@ class TopologicalSortAdjacencyList{
     public:
 
     vector<int> sortedGraph(vector<vector<int>> graph){
+     if (graph.empty() || graph.size() != graph[0].size() )
+        return {};
+        
     int numberOfNodes = graph.size();
     vector<int> sortedGraph;
     vector<int> inDegree (numberOfNodes, 0);
